@@ -478,13 +478,13 @@ var Gear = (function(fnST, fnCT, fnSI, fnCI, fnDt, global) {
 		oTray.title = '拖动调整速度\n双击即可归零';
 
 		// 尺
-		for(var i = -12; i <= 12; ++i) {
+		for(var i = -20; i <= 20; ++i) {
 			var num = document.createElement('div');
 			var sty = num.style;
 			var s;
 			
 			//
-			// -12 ~ +12 刻度
+			// 刻度
 			//
 			if (i == 0) {
 				num.innerHTML = '&clubs;';
@@ -677,7 +677,7 @@ var Gear = (function(fnST, fnCT, fnSI, fnCI, fnDt, global) {
 	
 	
 	function handleUpdateNum() {
-		var pow = 24 * (iPercent - 0.5);
+		var pow = 40 * (iPercent - 0.5);
 
 		var rate = Math.pow(2, pow);
 		Gear.setRate(rate);
